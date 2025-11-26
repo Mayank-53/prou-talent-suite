@@ -4,9 +4,10 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cp -r ../shared dist/shared",
     "start": "node -r tsconfig-paths/register dist/index.js",
     "lint": "tsc --noEmit"
+    
   },
   "keywords": [],
   "author": "",
