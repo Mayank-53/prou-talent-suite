@@ -390,5 +390,4 @@ The application supports three main user workflows:
 
 ---
 
-Feel free to reach out via the assignment email once this repo is pushed to GitHub and screenshots are added under `docs/`. Good luck!
 
