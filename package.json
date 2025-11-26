@@ -1,0 +1,32 @@
+{
+  "name": "internship",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "frontend:dev": "npm run dev --prefix frontend",
+    "backend:dev": "npm run dev --prefix backend",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "frontend:build": "npm run build --prefix frontend",
+    "backend:build": "npm run build --prefix backend",
+    "build": "npm-run-all backend:build frontend:build",
+    "frontend:lint": "npm run lint --prefix frontend",
+    "backend:lint": "npm run lint --prefix backend",
+    "lint": "npm-run-all --parallel frontend:lint backend:lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
